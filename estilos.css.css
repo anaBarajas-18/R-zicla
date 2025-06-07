@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #725c3a;
+    line-height: 1.6;
+    background-color: #e5d2b8;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #8edd82;
+    color: white;
+    margin-bottom: 40px;
+    border-radius: 0 0 20px 20px;
+    flex-shrink: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0056b3;
+}
+
+/* Contenedor de botones */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #61983d;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
+}
+
+.btn-social {
+    background-color: #4CAF50;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 107, 0, 0.4);
+}
+
+.btn-social:hover {
+    background-color: #45a049;
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* Botón Inicio (oculto por defecto) */
+#homeBtn {
+    display: none;
+}
+
+#homeBtn.show {
+    display: inline-block;
+}
+
+/* Estilo botón Inicio */
+.btn-home {
+    background-color: #725c3a;
+    box-shadow: 0 4px 10px rgba(193, 166, 124, 0.3);
+}
+
+.btn-home:hover {
+    background-color: #5d4a2f;
+    box-shadow: 0 6px 15px rgba(114, 92, 58, 0.4);
+}
+
+/* Contenido principal */
+.content-wrapper {
+    flex: 1;
+    margin-bottom: 40px;
+}
+
+.content-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.content-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Redes sociales */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.social-link i {
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+.social-link:hover {
+    transform: translateX(10px);
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    flex-shrink: 0;
+}
+
+/* Animaciones */
+.hidden {
+    opacity: 0;
+}
+
+.rise-up {
+    animation: riseUp 0.4s forwards;
+}
+
+@keyframes riseUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Temporización de animación */
+#title {
+    transform: translateY(30px);
+    animation-delay: 0.1s;
+    transition: 0.5s;
+}
+
+#subtitle {
+    transform: translateY(30px);
+    animation-delay: 0.3s;
+}
+
+.buttons-container .btn {
+    transform: translateY(30px);
+}
+
+#missionBtn {
+    animation-delay: 0.5s;
+}
+
+#visionBtn {
+    animation-delay: 0.6s;
+}
+
+#socialBtn {
+    animation-delay: 0.7s;
+}
+
+#homeBtn {
+    animation-delay: 0.8s;
+}
+
+footer {
+    transform: translateY(30px);
+    animation-delay: 0.9s;
+}
+#logoCona {
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1s ease;
+}
+
+#logoCona.rise-left {
+    opacity: 1;
+    transform: translateX(0);
+}
